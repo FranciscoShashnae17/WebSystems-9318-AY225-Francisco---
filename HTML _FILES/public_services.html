@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Public Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../CSS_FILES/style.css">
+
+  <!-- JavaScript -->
+  <script src="JS_FILES/script.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <h1>Public Services</h1>
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="about_bacoor_city.html">About</a>
+    <a href="City_department.html">Departments</a>
+    <a href="public_services.html">Services</a>
+    <a href="announcement.html">Announcements</a>
+    <a href="contact_us.html">Contact</a>
+  </nav>
+</header>
+
+<section class="section section-alt">
+  <form id="serviceForm" class="form-card">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" required placeholder="Enter your full name">
+
+    <label for="service">Service Type</label>
+    <select id="service" required>
+      <option value="">Select service</option>
+      <option>Barangay Clearance</option>
+      <option>Business Permit</option>
+      <option>Complaint</option>
+      <option>Certificate of Indigency</option>
+      <option>Senior Citizen ID Application</option>
+      <option>Voter’s Registration</option>
+      <option>Public Health Assistance</option>
+      <option>Birth / Marriage / Death Certificate Request</option>
+      <option>Permit for Street Vending</option>
+      <option>Community Consultation / Feedback</option>
+      <option>Other Requests</option>
+    </select>
+
+    <label for="message">Message / Details</label>
+    <textarea id="message" placeholder="Provide additional details if necessary"></textarea>
+
+    <button type="submit">Submit Request</button>
+  </form>
+
+  <p id="formStatus"></p>
+</section>
+
+</body>
+</html>

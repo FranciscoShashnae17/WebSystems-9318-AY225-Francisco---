@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>City Departments</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../CSS_FILES/style.css">
+
+  <!-- JavaScript -->
+  <script src="../JS_FILES/script.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <h1>City Departments</h1>
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="about_bacoor_city.html">About</a>
+    <a href="City_department.html">Departments</a>
+    <a href="public_services.html">Services</a>
+    <a href="announcement.html">Announcements</a>
+    <a href="contact_us.html">Contact</a>
+  </nav>
+</header>
+
+<section class="section">
+
+ 
+
+  <!-- Department Cards -->
+  <div class="card-list">
+    <div class="card department">City Health Office</div>
+    <div class="card department">City Engineering Office</div>
+    <div class="card department">City Social Welfare Department</div>
+    <div class="card department">Business Permits and Licensing Office</div>
+    <div class="card department">City Mayor’s Office</div>
+    <div class="card department">City Treasurer’s Office</div>
+    <div class="card department">City Assessor’s Office</div>
+    <div class="card department">City Planning and Development Office</div>
+    <div class="card department">City Agriculture Office</div>
+    <div class="card department">City Information Office</div>
+    <div class="card department">City Disaster Risk Reduction Management Office</div>
+    <div class="card department">City Tourism Office</div>
+  </div>
+
+  <!-- Announcements Modal -->
+  <ul id="newsList"></ul>
+
+  <div class="modal" id="newsModal">
+    <div class="modal-content">
+      <p id="modalText"></p>
+      <button onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+</section>
+
+</body>
+</html>

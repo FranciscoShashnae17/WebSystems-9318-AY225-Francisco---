@@ -1,0 +1,222 @@
+/* =====================
+   CSS VARIABLES
+===================== */
+:root {
+  --primary: #c46a8f;       /* rose pink */
+  --secondary: #f6c1d1;     /* blush */
+  --accent: #fff0f5;        /* soft background */
+  --text-dark: #333;
+  --text-light: #666;
+  --white: #ffffff;
+}
+
+/* =====================
+   GLOBAL STYLES
+===================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--accent);
+  color: var(--text-dark);
+}
+
+/* =====================
+   HEADER
+===================== */
+.site-header {
+  background: var(--primary);
+  color: var(--white);
+  padding: 20px;
+}
+
+.site-header h1 {
+  margin: 0 0 10px;
+}
+
+.main-nav a {
+  color: var(--white);
+  text-decoration: none;
+  margin-right: 15px;
+  font-weight: 500;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+/* =====================
+   SECTIONS
+===================== */
+.section {
+  background: var(--white);
+  margin: 25px;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.section-alt {
+  background: #fff7fa;
+}
+
+.section h2 {
+  color: var(--primary);
+  margin-top: 0;
+}
+
+/* =====================
+   CARDS
+===================== */
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.card {
+  background: var(--accent);
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 5px solid var(--secondary);
+}
+
+/* =====================
+   FORM
+===================== */
+.form-card {
+  max-width: 450px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px;
+  border: none;
+  border-radius: 20px;
+  background: var(--primary);
+  color: var(--white);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.secondary-btn {
+  background: var(--secondary);
+  color: var(--text-dark);
+}
+
+.status-text {
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+/* =====================
+   ANNOUNCEMENTS
+===================== */
+.announcement-list li {
+  background: var(--accent);
+  margin-bottom: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.announcement-list li:hover {
+  background: var(--secondary);
+}
+
+/* =====================
+   MODAL
+===================== */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background: var(--white);
+  max-width: 400px;
+  padding: 25px;
+  border-radius: 12px;
+  margin: 15% auto;
+  text-align: center;
+}
+/* ===================== ABOUT SECTION ===================== */
+.about-section {
+  max-width: 1200px;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 3rem 1rem 2rem 1rem; /* Added 3rem top padding for spacing */
+}
+
+/* Each container box for history, vision, mission, core values */
+.about-container {
+  background-color: #fff0f5; /* soft pastel pink */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.about-container h2 {
+  color: #c46a8f; /* rose pink */
+  margin-bottom: 1rem;
+}
+
+.about-container p,
+.about-container li {
+  color: #333;
+  line-height: 1.6;
+}
+
+.about-container ul {
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.highlight {
+  color: #ff1493;
+  font-weight: 600;
+}
+
+/* Responsive for tablets and mobiles */
+@media (min-width: 768px) {
+  .about-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .about-section {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

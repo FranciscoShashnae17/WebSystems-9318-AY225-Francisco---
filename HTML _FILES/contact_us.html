@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us | Bacoor City</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../CSS_FILES/style.css">
+
+  <!-- JavaScript -->
+  <script src="JS_FILES/script.js" defer></script>
+</head>
+<body>
+
+<!-- Header -->
+<header class="site-header">
+  <h1>Contact Us</h1>
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="about_bacoor_city.html">About</a>
+    <a href="City_department.html">Departments</a>
+    <a href="public_services.html">Services</a>
+    <a href="announcement.html">Announcements</a>
+    <a href="contact_us.html">Contact</a>
+  </nav>
+</header>
+
+<!-- Contact Information Section -->
+<section class="section contact-info">
+  <h2>Get in Touch</h2>
+  <p>Email: <strong>info@bacoorcity.gov.ph</strong></p>
+  <p>Phone: <strong>(046) 123-4567</strong></p>
+  <p>Office Address: <strong>Bacoor City Hall, Barangay Molino, Bacoor, Cavite, Philippines</strong></p>
+  <p>Operating Hours: <strong>Monday - Friday, 8:00 AM - 5:00 PM</strong></p>
+  <p>We welcome your inquiries, feedback, and suggestions. Your voice helps us serve the community better.</p>
+
+  <h3>Follow Us</h3>
+  <p>
+    <a href="https://web.facebook.com/CityGovtBacoor" target="_blank">Facebook</a> | 
+    <a href="https://www.instagram.com/bacoorcity" target="_blank">Instagram</a>
+  </p>
+</section>
+
+<!-- Contact Form Section -->
+<section class="section contact-form">
+  <h2>Send Us a Message</h2>
+  <form id="contactForm">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" placeholder="Your full name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="Your email address" required>
+
+    <label for="subject">Subject</label>
+    <input type="text" id="subject" placeholder="Subject" required>
+
+    <label for="message">Message</label>
+    <textarea id="message" rows="5" placeholder="Type your message here..." required></textarea>
+
+    <button type="submit">Submit</button>
+    <p id="formStatus"></p>
+  </form>
+</section>
+
+<script>
+  // Simple form handling
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const subject = document.getElementById("subject").value.trim();
+    const message = document.getElementById("message").value.trim();
+    const status = document.getElementById("formStatus");
+
+    if (!name || !email || !subject || !message) {
+      status.textContent = "Please complete all required fields.";
+      status.style.color = "crimson";
+      return;
+    }
+
+    // Placeholder for actual form submission logic
+    status.textContent = "Thank you! Your message has been submitted successfully.";
+    status.style.color = "green";
+    e.target.reset();
+  });
+</script>
+
+</body>
+</html>
